@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-dark.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Universal Code Generator</h1>
+            <p>Ask for any code in any programming language combination</p>
+        </header>
+        
+        <div class="chat-container">
+            <div class="messages" id="messages"></div>
+            
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="Describe what you want to code..."
+                        rows="3"
+                    ></textarea>
+                    <button id="sendBtn">Send</button>
+                </div>
+                
+                <div class="language-selector">
+                    <label>Primary Languages:</label>
+                    <select id="primaryLang" multiple>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="php">PHP</option>
+                        <option value="ruby">Ruby</option>
+                    </select>
+                    
+                    <label>Additional Languages:</label>
+                    <input type="text" id="additionalLangs" placeholder="kotlin, swift, dart, etc...">
+                </div>
+                
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="combineLangs" checked>
+                        Combine multiple languages in solution
+                    </label>
+                    <label>
+                        <input type="checkbox" id="liveCode" checked>
+                        Generate live/executable code
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
