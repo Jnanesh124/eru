@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Universal Code Generator - Python Server
